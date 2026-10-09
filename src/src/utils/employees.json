@@ -1,0 +1,419 @@
+[
+  {
+    "id": 1,
+    "email": "shilpa@example.com",
+    "password": "shilpa123",
+    "name": "Shilpa",
+    "role": "Frontend Developer",
+    "taskCounts": {
+      "active": 3,
+      "newTask": 2,
+      "completed": 2,
+      "failed": 0
+    },
+    "tasks": [
+      {
+        "taskId": 101,
+        "taskTitle": "Create Dashboard UI",
+        "taskDate": "2026-09-30",
+        "taskDescription": "Design and develop the main dashboard interface with responsive layouts.",
+        "taskCategory": "Design",
+        "employeeRole": "Frontend Developer",
+        "assignedTo": "Shilpa",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 102,
+        "taskTitle": "Build Login Page",
+        "taskDate": "2026-10-01",
+        "taskDescription": "Create a responsive login page with email and password validation.",
+        "taskCategory": "Development",
+        "employeeRole": "Frontend Developer",
+        "assignedTo": "Shilpa",
+        "active": true,
+        "newTask": false,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 103,
+        "taskTitle": "Fix Navigation Bug",
+        "taskDate": "2026-09-28",
+        "taskDescription": "Fix the navigation issue occurring when moving between dashboard pages.",
+        "taskCategory": "Bug Fix",
+        "employeeRole": "Frontend Developer",
+        "assignedTo": "Shilpa",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 104,
+        "taskTitle": "Create Employee Cards",
+        "taskDate": "2026-10-03",
+        "taskDescription": "Create reusable employee card components for displaying employee information.",
+        "taskCategory": "React",
+        "employeeRole": "Frontend Developer",
+        "assignedTo": "Shilpa",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 105,
+        "taskTitle": "Responsive Testing",
+        "taskDate": "2026-09-25",
+        "taskDescription": "Test the application on desktop, tablet and mobile screen sizes.",
+        "taskCategory": "Testing",
+        "employeeRole": "Frontend Developer",
+        "assignedTo": "Shilpa",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "email": "rahul@example.com",
+    "password": "rahul123",
+    "name": "Rahul",
+    "role": "Backend Developer",
+    "taskCounts": {
+      "active": 3,
+      "newTask": 2,
+      "completed": 2,
+      "failed": 0
+    },
+    "tasks": [
+      {
+        "taskId": 201,
+        "taskTitle": "Create User API",
+        "taskDate": "2026-09-30",
+        "taskDescription": "Develop REST API endpoints for creating and managing users.",
+        "taskCategory": "Backend",
+        "employeeRole": "Backend Developer",
+        "assignedTo": "Rahul",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 202,
+        "taskTitle": "Database Setup",
+        "taskDate": "2026-09-27",
+        "taskDescription": "Set up the database structure for users, employees and tasks.",
+        "taskCategory": "Database",
+        "employeeRole": "Backend Developer",
+        "assignedTo": "Rahul",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 203,
+        "taskTitle": "Authentication API",
+        "taskDate": "2026-10-02",
+        "taskDescription": "Implement login authentication and user session management.",
+        "taskCategory": "Authentication",
+        "employeeRole": "Backend Developer",
+        "assignedTo": "Rahul",
+        "active": true,
+        "newTask": false,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 204,
+        "taskTitle": "Fix API Response",
+        "taskDate": "2026-09-26",
+        "taskDescription": "Fix incorrect response data returned from the employee API.",
+        "taskCategory": "Bug Fix",
+        "employeeRole": "Backend Developer",
+        "assignedTo": "Rahul",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 205,
+        "taskTitle": "API Documentation",
+        "taskDate": "2026-10-05",
+        "taskDescription": "Document all available API endpoints and their request parameters.",
+        "taskCategory": "Documentation",
+        "employeeRole": "Backend Developer",
+        "assignedTo": "Rahul",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "email": "priya@example.com",
+    "password": "priya123",
+    "name": "Priya",
+    "role": "UI/UX Designer",
+    "taskCounts": {
+      "active": 3,
+      "newTask": 2,
+      "completed": 2,
+      "failed": 0
+    },
+    "tasks": [
+      {
+        "taskId": 301,
+        "taskTitle": "Design Login Screen",
+        "taskDate": "2026-09-30",
+        "taskDescription": "Create a modern and user-friendly login screen design.",
+        "taskCategory": "UI Design",
+        "employeeRole": "UI/UX Designer",
+        "assignedTo": "Priya",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 302,
+        "taskTitle": "Create Dashboard Wireframe",
+        "taskDate": "2026-09-28",
+        "taskDescription": "Prepare a wireframe for the admin dashboard and employee dashboard.",
+        "taskCategory": "Wireframe",
+        "employeeRole": "UI/UX Designer",
+        "assignedTo": "Priya",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 303,
+        "taskTitle": "Design Task Cards",
+        "taskDate": "2026-10-01",
+        "taskDescription": "Create task card designs showing employee, category and task status.",
+        "taskCategory": "UI Design",
+        "employeeRole": "UI/UX Designer",
+        "assignedTo": "Priya",
+        "active": true,
+        "newTask": false,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 304,
+        "taskTitle": "Update Color System",
+        "taskDate": "2026-09-24",
+        "taskDescription": "Update the application color system and document the new design colors.",
+        "taskCategory": "Design System",
+        "employeeRole": "UI/UX Designer",
+        "assignedTo": "Priya",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 305,
+        "taskTitle": "Mobile UI Design",
+        "taskDate": "2026-10-04",
+        "taskDescription": "Design responsive mobile layouts for the task management application.",
+        "taskCategory": "Responsive Design",
+        "employeeRole": "UI/UX Designer",
+        "assignedTo": "Priya",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "email": "aman@example.com",
+    "password": "aman123",
+    "name": "Aman",
+    "role": "QA Engineer",
+    "taskCounts": {
+      "active": 2,
+      "newTask": 1,
+      "completed": 2,
+      "failed": 1
+    },
+    "tasks": [
+      {
+        "taskId": 401,
+        "taskTitle": "Test Login Flow",
+        "taskDate": "2026-09-30",
+        "taskDescription": "Test login functionality with valid and invalid user credentials.",
+        "taskCategory": "Testing",
+        "employeeRole": "QA Engineer",
+        "assignedTo": "Aman",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 402,
+        "taskTitle": "Test Task Creation",
+        "taskDate": "2026-09-29",
+        "taskDescription": "Verify that administrators can create tasks with all required fields.",
+        "taskCategory": "Testing",
+        "employeeRole": "QA Engineer",
+        "assignedTo": "Aman",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 403,
+        "taskTitle": "Find Dashboard Bugs",
+        "taskDate": "2026-10-02",
+        "taskDescription": "Test the dashboard and report any UI or functional issues.",
+        "taskCategory": "Bug Testing",
+        "employeeRole": "QA Engineer",
+        "assignedTo": "Aman",
+        "active": true,
+        "newTask": false,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 404,
+        "taskTitle": "Browser Compatibility",
+        "taskDate": "2026-09-26",
+        "taskDescription": "Test the application across Chrome, Firefox and Edge browsers.",
+        "taskCategory": "Testing",
+        "employeeRole": "QA Engineer",
+        "assignedTo": "Aman",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 405,
+        "taskTitle": "Test Form Validation",
+        "taskDate": "2026-09-29",
+        "taskDescription": "Verify validation for task title, date, employee and category fields.",
+        "taskCategory": "Form Testing",
+        "employeeRole": "QA Engineer",
+        "assignedTo": "Aman",
+        "active": false,
+        "newTask": false,
+        "completed": false,
+        "failed": true
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "email": "neha@example.com",
+    "password": "neha123",
+    "name": "Neha",
+    "role": "Project Manager",
+    "taskCounts": {
+      "active": 3,
+      "newTask": 2,
+      "completed": 2,
+      "failed": 1
+    },
+    "tasks": [
+      {
+        "taskId": 501,
+        "taskTitle": "Prepare Project Plan",
+        "taskDate": "2026-09-30",
+        "taskDescription": "Prepare the development plan and assign tasks to the team members.",
+        "taskCategory": "Management",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 502,
+        "taskTitle": "Team Meeting",
+        "taskDate": "2026-09-29",
+        "taskDescription": "Conduct the weekly team meeting and review the project progress.",
+        "taskCategory": "Meeting",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 503,
+        "taskTitle": "Review Project Progress",
+        "taskDate": "2026-10-01",
+        "taskDescription": "Review the current progress of development and identify pending tasks.",
+        "taskCategory": "Management",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": true,
+        "newTask": false,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 504,
+        "taskTitle": "Client Feedback Review",
+        "taskDate": "2026-09-27",
+        "taskDescription": "Review client feedback and create tasks based on requested changes.",
+        "taskCategory": "Client",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": false,
+        "newTask": false,
+        "completed": true,
+        "failed": false
+      },
+      {
+        "taskId": 505,
+        "taskTitle": "Sprint Planning",
+        "taskDate": "2026-10-03",
+        "taskDescription": "Prepare the tasks and priorities for the next development sprint.",
+        "taskCategory": "Planning",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": true,
+        "newTask": true,
+        "completed": false,
+        "failed": false
+      },
+      {
+        "taskId": 506,
+        "taskTitle": "Update Project Report",
+        "taskDate": "2026-09-25",
+        "taskDescription": "Update the weekly project report with completed and pending tasks.",
+        "taskCategory": "Reporting",
+        "employeeRole": "Project Manager",
+        "assignedTo": "Neha",
+        "active": false,
+        "newTask": false,
+        "completed": false,
+        "failed": true
+      }
+    ]
+  }
+]
