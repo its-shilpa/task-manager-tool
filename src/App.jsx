@@ -9,30 +9,36 @@ const App = () => {
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
 
-  const authData = useContext(AuthContext)
+  const [authData, setAuthData] = useContext(AuthContext)
 
   // Check if user was already logged in
-  useEffect(() => {
+  
+useEffect(() => {
   if (!authData) return
-  const loggedInUser = localStorage.getItem("loggedInUser")
-  if (loggedInUser) {
-    const userData = JSON.parse(loggedInUser)
-    setUser(userData.role)
-    if (userData.role === "employee") {
-      const employee = authData.employees.find(
-        (e) => e.id === userData.id
-      )
-      setLoggedInUserData(employee)
-    }
 
-    if (userData.role === "admin") {
-      const admin = authData.admins.find(
-        (e) => e.id === userData.id
-      )
-      setLoggedInUserData(admin)
-    }
+  const loggedInUser = localStorage.getItem("loggedInUser")
+
+  if (!loggedInUser) return
+
+  const userData = JSON.parse(loggedInUser)
+
+  setUser(userData.role)
+
+  if (userData.role === "employee") {
+    const employee = authData.employees.find(
+      (e) => e.id === userData.id
+    )
+    setLoggedInUserData(employee || null)
+  }
+
+  if (userData.role === "admin") {
+    const admin = authData.admins.find(
+      (e) => e.id === userData.id
+    )
+    setLoggedInUserData(admin || null)
   }
 }, [authData])
+
 
 
   const handelLogin = (email, password) => {

@@ -1,6 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
 
     const CreateTask = () => {
+
+        const [userData, setUserData] = useContext(AuthContext)
+        const employees = userData?.employees || []
+
         // Store all form values in one state object
         const [taskData, setTaskData] = useState({
             taskTitle: '',
@@ -20,41 +25,72 @@ import React, { useState } from 'react'
         }))
     }
   
-    const submitHandler = (e) => {
-        e.preventDefault()
+    
+const submitHandler = (e) => {
+    e.preventDefault()
 
-        // Add default task status properties
-        const newTask = {
+    if (!taskData.taskTitle.trim() || !taskData.assignedTo.trim()) {
+        alert("Please enter a task title and employee name")
+        return
+    }
+
+    const employeeExists = userData.employees.some(
+        (employee) =>
+        employee.name?.trim().toLowerCase() ===
+        taskData.assignedTo.trim().toLowerCase()
+    )
+
+    if (!employeeExists) {
+        alert("Employee not found. Please check the employee name.")
+        return
+    }
+
+    const newTask = {
         ...taskData,
         taskId: Date.now(),
         newTask: true,
         active: false,
         completed: false,
-        failed: false
-        }
-    //    console.log('New Task:', newTask)
-
-     const data = JSON.parse(localStorage.getItem('employees'))
-        
-        data.forEach(function(elem) {
-            if(newTask.assignedTo === elem.name) {
-                elem.tasks.push(newTask)
-                console.log(elem);
-                
-            }
-            
-        })
-
-        // Clear the form after submission
-        setTaskData({
-            taskTitle: '',
-            taskDate: '',
-            assignedTo: '',
-            taskCategory: '',
-            taskDescription: ''
-        })       
-        
+        failed: false,
     }
+
+    // Update React state immutably
+    setUserData((prevData) => ({
+        ...prevData,
+        employees: prevData.employees.map((employee) => {
+        if (
+            employee.name?.trim().toLowerCase() !==
+            newTask.assignedTo.trim().toLowerCase()
+        ) {
+            return employee
+        }
+
+        const tasks = [...(employee.tasks || []), newTask]
+
+        return {
+            ...employee,
+            tasks,
+            taskCounts: {
+            newTask: tasks.filter((task) => task.newTask).length,
+            active: tasks.filter((task) => task.active).length,
+            completed: tasks.filter((task) => task.completed).length,
+            failed: tasks.filter((task) => task.failed).length,
+            },
+        }
+        }),
+    }))
+
+    setTaskData({
+        taskTitle: "",
+        taskDate: "",
+        assignedTo: "",
+        taskCategory: "",
+        taskDescription: "",
+    })
+
+    alert("Task created successfully!")
+    }
+
 
   return (
     <div className="mt-10">
@@ -105,19 +141,32 @@ import React, { useState } from 'react'
                 </div>
 
                 {/* Assign To */}
+                
+                {/* Assign To */}
                 <div>
-                    <label className="mb-2 block text-sm font-medium text-gray-300">
+                <label className="mb-2 block text-sm font-medium text-gray-300">
                     Task Assign To
-                    </label>
-                    <input
-                    type="text"
+                </label>
+
+                <select
                     name="assignedTo"
                     value={taskData.assignedTo}
                     onChange={handelChange}
-                    placeholder="Employee name"
-                    className="w-full rounded-lg border border-white/10 bg-[#1C1C1C] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                    />
+                    required
+                    className="w-full rounded-lg border border-white/10 bg-[#1C1C1C] px-4 py-3 text-sm text-white outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                >
+                    <option value="" disabled>
+                    Select an employee
+                    </option>
+
+                    {employees.map((employee) => (
+                    <option key={employee.id} value={employee.name}>
+                        {employee.name}
+                    </option>
+                    ))}
+                </select>
                 </div>
+
 
                 {/* Category */}
                 <div>

@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../../context/AuthProvider'
 
 const AllTask = () => {
-  const authData = useContext(AuthContext)
-  const employees = authData?.employees || []
+  const [userData, setUserData] = useContext(AuthContext)
+  const employees = userData?.employees || []
 
   return (
     <div className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-br from-[#252525] via-[#202020] to-[#151515] p-4 sm:p-6 shadow-2xl">
