@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* Lets us write dark: variants when needed (class based, toggled on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------
+   Theme tokens. Change colours here and the whole app follows.
+   ------------------------------------------------------------------ */
+:root {
+  --app: #f5f6fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f8;
+  --line: #e2e5f0;
+  --fg: #151833;
+  --muted: #646a86;
+
+  /* gradient stops used for headings and buttons */
+  --g1: #4f46e5;
+  --g2: #7c3aed;
+  --g3: #c026d3;
+
+  --ring: rgba(99, 102, 241, 0.45);
+  --shadow: 0 1px 2px rgba(21, 24, 51, 0.04), 0 8px 24px -12px rgba(21, 24, 51, 0.12);
+  color-scheme: light;
+}
+
+.dark {
+  --app: #0c0e1a;
+  --surface: #14172a;
+  --surface-2: #1b1f36;
+  --line: #272c47;
+  --fg: #eef0ff;
+  --muted: #9aa0c0;
+
+  --g1: #818cf8;
+  --g2: #a78bfa;
+  --g3: #f0abfc;
+
+  --ring: rgba(129, 140, 248, 0.55);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+  color-scheme: dark; /* also fixes native <select> popups on dark */
+}
+
+/* Makes bg-app, bg-surface, text-fg, border-line ... available as utilities */
+@theme inline {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-app: var(--app);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background-color: var(--app);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Gradient heading text */
+  .gradient-text {
+    background-image: linear-gradient(95deg, var(--g1), var(--g2) 55%, var(--g3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Primary gradient button */
+  .btn-gradient {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 0;
+    border-radius: 0.75rem;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(95deg, #4f46e5, #7c3aed 55%, #c026d3);
+    box-shadow: 0 8px 20px -10px rgba(124, 58, 237, 0.8);
+    transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-gradient:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 12px 24px -10px rgba(124, 58, 237, 0.9);
+  }
+  .btn-gradient:active {
+    transform: scale(0.97);
+  }
+  .btn-gradient:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  /* Quiet secondary button */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 0.55rem 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--fg);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+  .btn-ghost:hover {
+    background: var(--surface-2);
+  }
+  .btn-ghost:active {
+    transform: scale(0.97);
+  }
+
+  /* Destructive button */
+  .btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(244, 63, 94, 0.35);
+    background: rgba(244, 63, 94, 0.1);
+    padding: 0.55rem 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e11d48;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+  .btn-danger:hover {
+    background: rgba(244, 63, 94, 0.18);
+  }
+  .btn-danger:active {
+    transform: scale(0.97);
+  }
+  .dark .btn-danger {
+    color: #fb7185;
+  }
+
+  /* Inputs, selects, textareas */
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--fg);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .field::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--g1);
+    box-shadow: 0 0 0 3px var(--ring);
+  }
+
+  .card {
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

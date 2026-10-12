@@ -1,0 +1,236 @@
+[
+  {
+    "id": 101,
+    "title": "Create Dashboard UI",
+    "description": "Design and develop the main dashboard interface with responsive layouts.",
+    "category": "Design",
+    "dueDate": "2026-09-30",
+    "assignedTo": "e1",
+    "status": "new"
+  },
+  {
+    "id": 102,
+    "title": "Build Login Page",
+    "description": "Create a responsive login page with email and password validation.",
+    "category": "Development",
+    "dueDate": "2026-10-01",
+    "assignedTo": "e1",
+    "status": "active"
+  },
+  {
+    "id": 103,
+    "title": "Fix Navigation Bug",
+    "description": "Fix the navigation issue occurring when moving between dashboard pages.",
+    "category": "Bug Fix",
+    "dueDate": "2026-09-28",
+    "assignedTo": "e1",
+    "status": "completed"
+  },
+  {
+    "id": 104,
+    "title": "Create Employee Cards",
+    "description": "Create reusable employee card components for displaying employee information.",
+    "category": "React",
+    "dueDate": "2026-10-03",
+    "assignedTo": "e1",
+    "status": "new"
+  },
+  {
+    "id": 105,
+    "title": "Responsive Testing",
+    "description": "Test the application on desktop, tablet and mobile screen sizes.",
+    "category": "Testing",
+    "dueDate": "2026-09-25",
+    "assignedTo": "e1",
+    "status": "completed"
+  },
+  {
+    "id": 201,
+    "title": "Create User API",
+    "description": "Develop REST API endpoints for creating and managing users.",
+    "category": "Backend",
+    "dueDate": "2026-09-30",
+    "assignedTo": "e2",
+    "status": "new"
+  },
+  {
+    "id": 202,
+    "title": "Database Setup",
+    "description": "Set up the database structure for users, employees and tasks.",
+    "category": "Database",
+    "dueDate": "2026-09-27",
+    "assignedTo": "e2",
+    "status": "completed"
+  },
+  {
+    "id": 203,
+    "title": "Authentication API",
+    "description": "Implement login authentication and user session management.",
+    "category": "Authentication",
+    "dueDate": "2026-10-02",
+    "assignedTo": "e2",
+    "status": "active"
+  },
+  {
+    "id": 204,
+    "title": "Fix API Response",
+    "description": "Fix incorrect response data returned from the employee API.",
+    "category": "Bug Fix",
+    "dueDate": "2026-09-26",
+    "assignedTo": "e2",
+    "status": "completed"
+  },
+  {
+    "id": 205,
+    "title": "API Documentation",
+    "description": "Document all available API endpoints and their request parameters.",
+    "category": "Documentation",
+    "dueDate": "2026-10-05",
+    "assignedTo": "e2",
+    "status": "new"
+  },
+  {
+    "id": 301,
+    "title": "Design Login Screen",
+    "description": "Create a modern and user-friendly login screen design.",
+    "category": "UI Design",
+    "dueDate": "2026-09-30",
+    "assignedTo": "e3",
+    "status": "new"
+  },
+  {
+    "id": 302,
+    "title": "Create Dashboard Wireframe",
+    "description": "Prepare a wireframe for the admin dashboard and employee dashboard.",
+    "category": "Wireframe",
+    "dueDate": "2026-09-28",
+    "assignedTo": "e3",
+    "status": "completed"
+  },
+  {
+    "id": 303,
+    "title": "Design Task Cards",
+    "description": "Create task card designs showing employee, category and task status.",
+    "category": "UI Design",
+    "dueDate": "2026-10-01",
+    "assignedTo": "e3",
+    "status": "active"
+  },
+  {
+    "id": 304,
+    "title": "Update Color System",
+    "description": "Update the application color system and document the new design colors.",
+    "category": "Design System",
+    "dueDate": "2026-09-24",
+    "assignedTo": "e3",
+    "status": "completed"
+  },
+  {
+    "id": 305,
+    "title": "Mobile UI Design",
+    "description": "Design responsive mobile layouts for the task management application.",
+    "category": "Responsive Design",
+    "dueDate": "2026-10-04",
+    "assignedTo": "e3",
+    "status": "new"
+  },
+  {
+    "id": 401,
+    "title": "Test Login Flow",
+    "description": "Test login functionality with valid and invalid user credentials.",
+    "category": "Testing",
+    "dueDate": "2026-09-30",
+    "assignedTo": "e4",
+    "status": "new"
+  },
+  {
+    "id": 402,
+    "title": "Test Task Creation",
+    "description": "Verify that administrators can create tasks with all required fields.",
+    "category": "Testing",
+    "dueDate": "2026-09-29",
+    "assignedTo": "e4",
+    "status": "completed"
+  },
+  {
+    "id": 403,
+    "title": "Find Dashboard Bugs",
+    "description": "Test the dashboard and report any UI or functional issues.",
+    "category": "Bug Testing",
+    "dueDate": "2026-10-02",
+    "assignedTo": "e4",
+    "status": "active"
+  },
+  {
+    "id": 404,
+    "title": "Browser Compatibility",
+    "description": "Test the application across Chrome, Firefox and Edge browsers.",
+    "category": "Testing",
+    "dueDate": "2026-09-26",
+    "assignedTo": "e4",
+    "status": "completed"
+  },
+  {
+    "id": 405,
+    "title": "Test Form Validation",
+    "description": "Verify validation for task title, date, employee and category fields.",
+    "category": "Form Testing",
+    "dueDate": "2026-09-29",
+    "assignedTo": "e4",
+    "status": "failed"
+  },
+  {
+    "id": 501,
+    "title": "Prepare Project Plan",
+    "description": "Prepare the development plan and assign tasks to the team members.",
+    "category": "Management",
+    "dueDate": "2026-09-30",
+    "assignedTo": "e5",
+    "status": "new"
+  },
+  {
+    "id": 502,
+    "title": "Team Meeting",
+    "description": "Conduct the weekly team meeting and review the project progress.",
+    "category": "Meeting",
+    "dueDate": "2026-09-29",
+    "assignedTo": "e5",
+    "status": "completed"
+  },
+  {
+    "id": 503,
+    "title": "Review Project Progress",
+    "description": "Review the current progress of development and identify pending tasks.",
+    "category": "Management",
+    "dueDate": "2026-10-01",
+    "assignedTo": "e5",
+    "status": "active"
+  },
+  {
+    "id": 504,
+    "title": "Client Feedback Review",
+    "description": "Review client feedback and create tasks based on requested changes.",
+    "category": "Client",
+    "dueDate": "2026-09-27",
+    "assignedTo": "e5",
+    "status": "completed"
+  },
+  {
+    "id": 505,
+    "title": "Sprint Planning",
+    "description": "Prepare the tasks and priorities for the next development sprint.",
+    "category": "Planning",
+    "dueDate": "2026-10-03",
+    "assignedTo": "e5",
+    "status": "new"
+  },
+  {
+    "id": 506,
+    "title": "Update Project Report",
+    "description": "Update the weekly project report with completed and pending tasks.",
+    "category": "Reporting",
+    "dueDate": "2026-09-25",
+    "assignedTo": "e5",
+    "status": "failed"
+  }
+]

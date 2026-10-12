@@ -1,0 +1,50 @@
+[
+  {
+    "id": "a1",
+    "name": "Admin",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "admin",
+    "position": "Administrator"
+  },
+  {
+    "id": "e1",
+    "name": "Shilpa",
+    "email": "shilpa@example.com",
+    "password": "shilpa123",
+    "role": "employee",
+    "position": "Frontend Developer"
+  },
+  {
+    "id": "e2",
+    "name": "Rahul",
+    "email": "rahul@example.com",
+    "password": "rahul123",
+    "role": "employee",
+    "position": "Backend Developer"
+  },
+  {
+    "id": "e3",
+    "name": "Priya",
+    "email": "priya@example.com",
+    "password": "priya123",
+    "role": "employee",
+    "position": "UI/UX Designer"
+  },
+  {
+    "id": "e4",
+    "name": "Aman",
+    "email": "aman@example.com",
+    "password": "aman123",
+    "role": "employee",
+    "position": "QA Engineer"
+  },
+  {
+    "id": "e5",
+    "name": "Neha",
+    "email": "neha@example.com",
+    "password": "neha123",
+    "role": "employee",
+    "position": "Project Manager"
+  }
+]
