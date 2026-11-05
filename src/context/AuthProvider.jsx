@@ -5,7 +5,6 @@ import { loadJSON, removeKey, saveJSON } from '../utils/storage'
 const AuthContext = createContext(null)
 const SESSION_KEY = 'taskflow.session'
 
-
 // Demo only: users come from a JSON file and passwords are checked in the browser.
 // A real app checks credentials on a server and never ships passwords to the client.
 const users = seedUsers.map(({ password, ...safeUser }) => ({ ...safeUser, _password: password }))
