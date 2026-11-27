@@ -27,7 +27,7 @@ export default function TaskCard({ task }) {
   }
 
   return (
-    <article className="card flex flex-col p-5 transition hover:-translate-y-0.5">
+    <article className="card flex flex-col p-5 transition hover:-translate-y-0.5 hover:border-blue-500/35 dark:hover:border-indigo-400/35">
       <div className="flex items-center justify-between gap-3 text-sm">
         <span className="truncate rounded-lg bg-surface-2 px-2.5 py-1 text-xs font-semibold text-muted">
           {task.category}

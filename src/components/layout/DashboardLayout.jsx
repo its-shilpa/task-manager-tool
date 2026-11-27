@@ -74,7 +74,7 @@ export default function DashboardLayout({ links }) {
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
                   isActive
-                    ? 'bg-linear-to-r from-indigo-600 to-fuchsia-600 text-white shadow-md shadow-violet-500/25'
+                    ? 'bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-sm shadow-indigo-500/25'
                     : 'text-muted hover:bg-surface-2 hover:text-fg'
                 }`
               }

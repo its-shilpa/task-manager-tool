@@ -7,37 +7,37 @@
    Theme tokens. Change colours here and the whole app follows.
    ------------------------------------------------------------------ */
 :root {
-  --app: #f5f6fb;
+  --app: #f6f8fc;
   --surface: #ffffff;
-  --surface-2: #eef0f8;
-  --line: #e2e5f0;
-  --fg: #151833;
-  --muted: #646a86;
+  --surface-2: #eff3fa;
+  --line: #e1e7f2;
+  --fg: #0f172a;
+  --muted: #64748b;
 
-  /* gradient stops used for headings and buttons */
-  --g1: #4f46e5;
-  --g2: #7c3aed;
-  --g3: #c026d3;
+  /* gradient stops used for headings and accents (cobalt blue -> indigo -> purple) */
+  --g1: #2563eb;
+  --g2: #4f46e5;
+  --g3: #7c3aed;
 
-  --ring: rgba(99, 102, 241, 0.45);
-  --shadow: 0 1px 2px rgba(21, 24, 51, 0.04), 0 8px 24px -12px rgba(21, 24, 51, 0.12);
+  --ring: rgba(59, 130, 246, 0.35);
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.1);
   color-scheme: light;
 }
 
 .dark {
-  --app: #0c0e1a;
-  --surface: #14172a;
-  --surface-2: #1b1f36;
-  --line: #272c47;
-  --fg: #eef0ff;
-  --muted: #9aa0c0;
+  --app: #090d16;
+  --surface: #111827;
+  --surface-2: #1a2234;
+  --line: #263147;
+  --fg: #f1f5f9;
+  --muted: #94a3b8;
 
-  --g1: #818cf8;
-  --g2: #a78bfa;
-  --g3: #f0abfc;
+  --g1: #60a5fa;
+  --g2: #818cf8;
+  --g3: #a78bfa;
 
-  --ring: rgba(129, 140, 248, 0.55);
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+  --ring: rgba(96, 165, 250, 0.45);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px -14px rgba(0, 0, 0, 0.75);
   color-scheme: dark; /* also fixes native <select> popups on dark */
 }
 
@@ -92,13 +92,20 @@
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    background-image: linear-gradient(95deg, #4f46e5, #7c3aed 55%, #c026d3);
-    box-shadow: 0 8px 20px -10px rgba(124, 58, 237, 0.8);
+    background-image: linear-gradient(135deg, #2563eb 0%, #4f46e5 55%, #6d28d9 100%);
+    box-shadow: 0 6px 18px -6px rgba(79, 70, 229, 0.5);
     transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
   }
   .btn-gradient:hover {
-    filter: brightness(1.08);
-    box-shadow: 0 12px 24px -10px rgba(124, 58, 237, 0.9);
+    filter: brightness(1.07);
+    box-shadow: 0 10px 22px -6px rgba(79, 70, 229, 0.6);
+  }
+  .dark .btn-gradient {
+    background-image: linear-gradient(135deg, #3b82f6 0%, #6366f1 55%, #7c3aed 100%);
+    box-shadow: 0 6px 20px -6px rgba(99, 102, 241, 0.45);
+  }
+  .dark .btn-gradient:hover {
+    box-shadow: 0 10px 24px -6px rgba(99, 102, 241, 0.6);
   }
   .btn-gradient:active {
     transform: scale(0.97);

@@ -4,7 +4,7 @@ import { prefersReducedMotion } from '../../utils/motion'
 import Icon from './Icon'
 
 // A number with a label. The number counts up when it appears or changes.
-export default function StatCard({ label, value, icon, gradient = 'from-indigo-500 to-violet-500', className = '' }) {
+export default function StatCard({ label, value, icon, gradient = 'from-blue-600 to-indigo-600', className = '' }) {
   const shown = useRef(0)
   const [display, setDisplay] = useState(0)
 
@@ -31,7 +31,7 @@ export default function StatCard({ label, value, icon, gradient = 'from-indigo-5
   return (
     <div className={`card flex items-center gap-4 p-4 sm:p-5 ${className}`}>
       <span
-        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br text-white ${gradient}`}
+        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br text-white shadow-sm shadow-indigo-500/15 ${gradient}`}
       >
         <Icon name={icon} className="h-5 w-5" />
       </span>

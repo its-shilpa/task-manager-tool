@@ -67,9 +67,9 @@ export default function Login() {
   return (
     <div ref={scope} className="grid min-h-screen lg:grid-cols-2">
       {/* Left: brand panel (large screens only) */}
-      <section className="relative hidden overflow-hidden bg-linear-to-br from-indigo-700 via-violet-700 to-fuchsia-700 p-12 text-white lg:flex lg:flex-col lg:justify-between">
-        <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-16 h-96 w-96 rounded-full bg-fuchsia-400/20 blur-3xl" />
+      <section className="relative hidden overflow-hidden bg-linear-to-br from-slate-950 via-blue-950 to-indigo-950 p-12 text-white lg:flex lg:flex-col lg:justify-between">
+        <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute -bottom-32 -left-16 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" />
 
         <div className="relative" data-hero>
           <Logo />

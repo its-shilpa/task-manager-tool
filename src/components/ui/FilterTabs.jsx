@@ -14,8 +14,8 @@ export default function FilterTabs({ tabs, active, onChange }) {
               onClick={() => onChange(tab.value)}
               className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
                 isActive
-                  ? 'border-transparent bg-linear-to-r from-indigo-600 to-fuchsia-600 text-white shadow-md shadow-violet-500/25'
-                  : 'border-line bg-surface text-muted hover:text-fg'
+                  ? 'border-transparent bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-sm shadow-indigo-500/25'
+                  : 'border-line bg-surface text-muted hover:border-indigo-400/50 hover:text-fg'
               }`}
             >
               {tab.label}
